@@ -1,6 +1,6 @@
 # CIFO_PROJECT
  This study presents a comprehensive genetic-algorithm approach to solving the 3×3 Rubik’s
- Cube, whose approximately 4.30 × 1019 reachable configurations pose an immense search challenge.
+ Cube, whose approximately 4.30 × 10^19 reachable configurations pose an immense search challenge.
  We extend prior work by developing a flexible cube representation that supports all eighteen face
  and slice moves and by implementing interchangeable crossover, mutation and selection operators
  with automatic elimination of redundant moves.
