@@ -1,18 +1,67 @@
-# CIFO_PROJECT
- This study presents a comprehensive genetic-algorithm approach to solving the 3×3 Rubik’s
- Cube, whose approximately 4.30 × 10^19 reachable configurations pose an immense search challenge.
- We extend prior work by developing a flexible cube representation that supports all eighteen face
- and slice moves and by implementing interchangeable crossover, mutation and selection operators
- with automatic elimination of redundant moves.
- After the evolutionary phase, candidate solutions undergo a multigene local search followed by a
- greedy look-ahead refinement. We systematically evaluate every combination of mutation, crossover
- and selection strategies via grid search, then employ random search to tune hyperparameters includ
-ing population size, chromosome length, crossover and mutation probabilities, elitism proportion and
- generation limit.
- Experiments comprising thirty independent runs for each of twelve operator schemes identify an
- optimal configuration—200 individuals, 30-move chromosomes, 60 % crossover probability, 30 % mu
-tation probability, 1 % elitism, segment mutation, two-point crossover and tournament selection over
- 1500 generations. Wilcoxon signed-rank tests confirm that both refinement phases yield significant
- performance gains. Although only two trials achieved perfect solutions for ten-move scrambles, the
- algorithm consistently reduces scramble disorder, underscoring the promise of genetic algorithms as
- domain-agnostic solvers for complex combinatorial challenges.
+
+# 🧬 Solving the 3×3 Rubik’s Cube with Genetic Algorithms
+
+## 📘 Overview
+
+This study presents a **comprehensive genetic algorithm approach** to solving the 3×3 Rubik’s Cube, whose approximately **4.30 × 10¹⁹** reachable configurations pose an immense search challenge.
+
+We extend prior work by:
+
+- Developing a flexible cube representation that supports **all eighteen face and slice moves**
+- Implementing **interchangeable crossover, mutation, and selection operators**
+- Automatically **eliminating redundant moves**
+
+---
+
+## 🧠 Solution Strategy
+
+After the evolutionary phase, candidate solutions go through two refinement steps:
+
+1. **Multigene Local Search**
+2. **Greedy Look-Ahead Refinement**
+
+We conduct a **systematic evaluation** of every combination of mutation, crossover, and selection strategies using **grid search**, followed by **random search** to tune hyperparameters including:
+
+- Population size  
+- Chromosome length  
+- Crossover and mutation probabilities  
+- Elitism proportion  
+- Generation limit  
+
+---
+
+## 🔬 Experimental Setup
+
+- **30 independent runs** for each of 12 operator schemes  
+- Grid and random search for operator and hyperparameter tuning
+
+---
+
+## ✅ Optimal Configuration
+
+The best-performing setup was:
+
+- **Population Size**: 200  
+- **Chromosome Length**: 30 moves  
+- **Crossover Probability**: 60%  
+- **Mutation Probability**: 30%  
+- **Elitism**: 1%  
+- **Mutation Operator**: Segment Mutation  
+- **Crossover Operator**: Two-Point Crossover  
+- **Selection Method**: Tournament Selection  
+- **Generations**: 1500  
+
+---
+
+## 📈 Results
+
+- **Wilcoxon signed-rank tests** confirmed that both refinement phases yielded significant performance improvements
+- Only **two trials** achieved perfect solutions for ten-move scrambles
+- However, the algorithm **consistently reduced scramble disorder**
+
+---
+
+## 🧩 Conclusion
+
+While perfect solves were rare, the consistent improvement in scramble state **demonstrates the promise of genetic algorithms** as powerful, domain-agnostic solvers for complex **combinatorial challenges** like the Rubik’s Cube.
+
